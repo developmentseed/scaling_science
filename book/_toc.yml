@@ -1,0 +1,5 @@
+format: jb-book
+root: docs/index
+chapters:
+  - file: docs/Open_data_code.ipynb
+  - file: docs/appendix
