@@ -3,4 +3,5 @@ root: docs/index
 chapters:
   - file: docs/Open_data_code.ipynb
   - file: docs/Use_of_notebooks.ipynb
+  - file: docs/Containerization.ipynb
   - file: docs/appendix
