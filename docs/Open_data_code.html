@@ -1,0 +1,880 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Open Access to Data and Code &#8212; Scaling Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/Open_data_code';</script>
+    <link rel="shortcut icon" href="../_static/grss.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Use of the Jupyter ecosystem" href="Use_of_notebooks.html" />
+    <link rel="prev" title="Scaling Science: A guidebook." href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/grss.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/grss.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Open Access to Data and Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Use_of_notebooks.html">Use of the Jupyter ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Containerization.html">Containerization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Appendix</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/developmentseed/scaling_science/main?urlpath=tree/book/docs/Open_data_code.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/developmentseed/scaling_science/blob/main/book/docs/Open_data_code.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/developmentseed/scaling_science" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/developmentseed/scaling_science/edit/main/book/docs/Open_data_code.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/developmentseed/scaling_science/issues/new?title=Issue%20on%20page%20%2Fdocs/Open_data_code.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/Open_data_code.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Open Access to Data and Code</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-data-and-code-for-sharing">Preparing Data and Code for Sharing:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#organize-your-data-and-code-in-a-clear-and-well-documented-structure">Organize your data and code in a clear and well-documented structure.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-github-for-version-control-and-collaboration">Using GitHub for version control and collaboration:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="open-access-to-data-and-code">
+<h1>Open Access to Data and Code<a class="headerlink" href="#open-access-to-data-and-code" title="Permalink to this heading">#</a></h1>
+<p>Ensuring open access to data and code is crucial for promoting transparency, reproducibility, and collaboration in scientific research. Here’s how you can achieve this by leveraging repositories like <a class="reference external" href="https://github.com/">GitHub</a> and <a class="reference external" href="https://huggingface.co/">Hugging Face</a> to host code and data:</p>
+<section id="preparing-data-and-code-for-sharing">
+<h2>Preparing Data and Code for Sharing:<a class="headerlink" href="#preparing-data-and-code-for-sharing" title="Permalink to this heading">#</a></h2>
+<section id="organize-your-data-and-code-in-a-clear-and-well-documented-structure">
+<h3>Organize your data and code in a clear and well-documented structure.<a class="headerlink" href="#organize-your-data-and-code-in-a-clear-and-well-documented-structure" title="Permalink to this heading">#</a></h3>
+<p>Modern best practices for organizing Python code focus on improving readability, maintainability, scalability, and collaboration among developers. The following are some good practice recommendations.</p>
+<p><strong>1. Follow PEP 8 guidelines:</strong></p>
+<ul class="simple">
+<li><p>Adhere to the <a class="reference external" href="https://peps.python.org/pep-0008/">Python Enhancement Proposal (PEP) 8 style guide</a> for consistent and readable code formatting.</p></li>
+<li><p>Use tools like <a class="reference external" href="https://flake8.pycqa.org/en/latest/">flake8</a> or <a class="reference external" href="https://readthedocs.org/projects/pylint/">pylint</a> to automatically check code adherence to PEP 8 standards.</p></li>
+</ul>
+<p><strong>2. Use descriptive naming:</strong></p>
+<ul class="simple">
+<li><p>Choose meaningful and descriptive names for variables, functions, classes, and modules to enhance code clarity.</p></li>
+<li><p>Follow the <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> naming convention for variables and functions, <code class="docutils literal notranslate"><span class="pre">UpperCamelCase</span></code> for class names, and <code class="docutils literal notranslate"><span class="pre">ALL_CAPS</span></code> for constants.</p></li>
+<li><p>Use nouns for variable names and verbs combined with nouns for functions.</p></li>
+</ul>
+<p><strong>3. Organize code into modules and packages:</strong></p>
+<ul class="simple">
+<li><p>Break code into logical functions, modules and packages to group related functionality together.</p></li>
+<li><p>Avoid cluttering the main script by moving reusable code into separate functions and modules.</p></li>
+<li><p>Create a clear folder structure and use packages to organize related modules into hierarchical namespaces.</p></li>
+</ul>
+<p><strong>4. Separation of concerns:</strong></p>
+<ul class="simple">
+<li><p>Follow the principle of separation of concerns by separating different aspects of functionality into distinct modules or classes.</p></li>
+<li><p>Divide code into functional parts (e.g., data pre-processing module, data loading module, model architecture module) to improve maintainability and scalability.</p></li>
+</ul>
+<p><strong>5. Use docstrings and comments where necessary:</strong></p>
+<ul class="simple">
+<li><p>Include descriptive docstrings for modules, classes, functions, and methods to document their purpose, parameters, return values, and usage examples.</p></li>
+<li><p>Use tools like <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> to generate documentation from docstrings automatically.</p></li>
+<li><p>Commenting code is also advisable when the code is very compact or hard to parse intuitively.</p></li>
+</ul>
+<p>In the next cell, you’ll find an example of using docstrings within a function to describe its purpose and that of the arguments required to execute it. Don’t worry about understanding everything going on in the cell yet. Just notice how we can easily understand the role of the function. It’s also worth noting that the code is well commented and the abides by the naming schematics we touched on earlier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">Polygon</span><span class="p">,</span> <span class="n">box</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pystac_client</span>
+<span class="kn">import</span> <span class="nn">stackstac</span>
+<span class="kn">from</span> <span class="nn">rasterio.enums</span> <span class="kn">import</span> <span class="n">Resampling</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="k">def</span> <span class="nf">read_sentinel_image_from_stac</span><span class="p">(</span><span class="n">stac_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">collection</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">bbox</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">start_date</span><span class="p">:</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">end_date</span><span class="p">:</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">bands</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">max_cloud_cover</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">epsg</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Read the best Sentinel-2 image from the last two weeks based on cloud coverage </span>
+<span class="sd">    within the specified bounding box from a STAC catalog using pystac_client.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        stac_url (str): The URL of the STAC catalog.</span>
+<span class="sd">        collection (str): Name of the collection to search within the STAC catalog.</span>
+<span class="sd">        bbox (list): Bounding box coordinates [west, south, east, north].</span>
+<span class="sd">        start_date (datetime): Start date for temporal filtering.</span>
+<span class="sd">        end_date (datetime): End date for temporal filtering.</span>
+<span class="sd">        bands (list): List of bands to retrieve (e.g., [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]).</span>
+<span class="sd">        max_cloud_cover (int): Maximum cloud cover percentage allowed.</span>
+<span class="sd">        epsg (int): EPSG code for the coordinate reference system.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        xr.DataArray: The Sentinel-2 image as an xarray DataArray.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If the request to the STAC API fails or if no suitable items are found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Define area of interest (AOI)</span>
+        <span class="n">area_of_interest</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="o">*</span><span class="n">bbox</span><span class="p">)</span>
+
+        <span class="c1"># Connect to the STAC catalog</span>
+        <span class="n">catalog</span> <span class="o">=</span> <span class="n">pystac_client</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">stac_url</span><span class="p">)</span>
+
+        <span class="c1"># Search for Sentinel-2 items within the specified date range and AOI</span>
+        <span class="n">search</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="n">collections</span><span class="o">=</span><span class="p">[</span><span class="n">collection</span><span class="p">],</span>
+            <span class="n">datetime</span><span class="o">=</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">),</span>
+            <span class="n">intersects</span><span class="o">=</span><span class="n">area_of_interest</span><span class="p">,</span>
+            <span class="n">max_items</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+            <span class="n">query</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;eo:cloud_cover&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;lt&quot;</span><span class="p">:</span> <span class="n">max_cloud_cover</span><span class="p">}},</span>
+        <span class="p">)</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="n">search</span><span class="o">.</span><span class="n">get_all_items</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">items</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No suitable items found in the STAC catalog&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Choose the last item from the search results</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="c1"># Stack the assets (e.g., red, green, blue bands) into an xarray DataArray</span>
+        <span class="n">stack</span> <span class="o">=</span> <span class="n">stackstac</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span>
+            <span class="n">item</span><span class="p">,</span>
+            <span class="n">bounds</span><span class="o">=</span><span class="n">bbox</span><span class="p">,</span>
+            <span class="n">snap_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">,</span>
+            <span class="n">epsg</span><span class="o">=</span><span class="n">epsg</span><span class="p">,</span>
+            <span class="n">rescale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">assets</span><span class="o">=</span><span class="n">bands</span><span class="p">,</span>
+            <span class="n">resampling</span><span class="o">=</span><span class="n">Resampling</span><span class="o">.</span><span class="n">nearest</span><span class="p">,</span>
+            <span class="n">xy_coords</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">stack</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span> 
+        <span class="k">return</span> <span class="n">stack</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error accessing STAC catalog: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Example usage:</span>
+<span class="n">STAC_URL</span> <span class="o">=</span> <span class="s2">&quot;https://earth-search.aws.element84.com/v1&quot;</span>  <span class="c1"># AWS public Sentinel-2 STAC catalog</span>
+<span class="n">COLLECTION</span> <span class="o">=</span> <span class="s2">&quot;sentinel-2-l2a&quot;</span>  <span class="c1"># Sentinel-2 collection id</span>
+<span class="n">BBOX</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">122.51</span><span class="p">,</span> <span class="mf">37.75</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.45</span><span class="p">,</span> <span class="mf">37.78</span><span class="p">]</span>  <span class="c1"># Bounding box for a subset of San Francisco</span>
+<span class="n">START_DATE</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">weeks</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Last two weeks</span>
+<span class="n">END_DATE</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="c1"># Today</span>
+<span class="n">MAX_CLOUD_COVER</span> <span class="o">=</span> <span class="mi">80</span> <span class="c1"># In percentage of pixels</span>
+<span class="n">BANDS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;nir&quot;</span><span class="p">]</span> <span class="c1"># Specific bands we want to use from Sentinel-2</span>
+<span class="n">EPSG</span> <span class="o">=</span> <span class="mi">4326</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">sentinel_image</span> <span class="o">=</span> <span class="n">read_sentinel_image_from_stac</span><span class="p">(</span><span class="n">STAC_URL</span><span class="p">,</span> <span class="n">COLLECTION</span><span class="p">,</span> <span class="n">BBOX</span><span class="p">,</span> <span class="n">START_DATE</span><span class="p">,</span>  
+                                                   <span class="n">END_DATE</span><span class="p">,</span> <span class="n">BANDS</span><span class="p">,</span> <span class="n">MAX_CLOUD_COVER</span><span class="p">,</span> <span class="n">EPSG</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentinel-2 image loaded successfully&quot;</span><span class="p">)</span>
+    <span class="c1"># Plot the true color image</span>
+    <span class="n">plot</span> <span class="o">=</span> <span class="n">sentinel_image</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">rgb</span><span class="o">=</span><span class="s2">&quot;band&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+    <span class="c1"># Rotate x-axis labels diagonally</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">ve</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span> <span class="n">ve</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/lillythomas/.pyenv/versions/wave/lib/python3.8/site-packages/stackstac/prepare.py:363: UserWarning: The argument &#39;infer_datetime_format&#39; is deprecated and will be removed in a future version. A strict version of it is now the default, see https://pandas.pydata.org/pdeps/0004-consistent-to-datetime-parsing.html. You can safely remove this argument.
+  times = pd.to_datetime(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentinel-2 image loaded successfully
+</pre></div>
+</div>
+<img alt="../_images/c9371d82d1bd49f73e898aeb7911e8916d3b5c87508971cfeeea316e8a6e8e31.png" src="../_images/c9371d82d1bd49f73e898aeb7911e8916d3b5c87508971cfeeea316e8a6e8e31.png" />
+</div>
+</div>
+<p><strong>6. Apply DRY (Don’t Repeat Yourself) principle:</strong></p>
+<ul class="simple">
+<li><p>Avoid code duplication by extracting common functionality into reusable functions, classes, or modules.</p></li>
+<li><p>Encapsulate repetitive patterns into helper functions or utility modules to promote code reuse.</p></li>
+</ul>
+<p>In general, we want to avoid re-writing a lot of <a class="reference external" href="https://aws.amazon.com/what-is/boilerplate-code/#:~:text=Boilerplate%20code%20is%20computer%20language,minimal%20changes%20for%20different%20situations.">boiler-plate code</a> and instead abstract that to re-usable/re-purposable modules and/or use libraries that have already abstracted away a lot of low-level functionality. A good example of this for those who program in python and use satellite imagery is <a class="reference external" href="https://rasterio.readthedocs.io/en/stable/">rasterio</a>. This <a class="reference external" href="https://opensource.guide/">open source</a> library abstracts away a lot of low-level image processing functionality into concise and wide-purpose functions that apply across many downstream applications.</p>
+<p><strong>7. Follow Single Responsibility Principle (SRP):</strong></p>
+<ul class="simple">
+<li><p>Try to ensure that each module, class, or function has a single responsibility or purpose.</p></li>
+<li><p>Refactor complex functions or classes into smaller, focused units of functionality to improve readability and maintainability.</p></li>
+</ul>
+<p><strong>8. Use configuration files:</strong></p>
+<ul class="simple">
+<li><p>Using configuration files to centralize parameters and constants is a common and effective practice in software development. It allows you to separate configuration details from code logic, making it easier to manage and update experiments or workflows without modifying the code itself.</p></li>
+<li><p>Choose a configuration file format:</p>
+<ul>
+<li><p>Common formats include <a class="reference external" href="https://www.json.org/json-en.html">JSON</a>, <a class="reference external" href="https://yaml.org/">YAML</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/INI_file">INI</a>, and <a class="reference external" href="https://toml.io/en/">TOML</a>. Choose the format that best suits your project’s requirements and preferences.</p></li>
+</ul>
+</li>
+<li><p>Define configuration parameters:</p>
+<ul>
+<li><p>Identify the parameters and constants in your code that are subject to change or customization, such as file paths, API endpoints, database connection details, argument flags, hyperparameters, logging settings, etc.</p></li>
+</ul>
+</li>
+<li><p>Create a config file:</p>
+<ul>
+<li><p>Create a dedicated configuration file (e.g., <code class="docutils literal notranslate"><span class="pre">config.json</span></code>, <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>) to store the configuration parameters.</p></li>
+<li><p>Organize parameters hierarchically if needed, especially for complex configurations.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p>An example in YAML format for a simple image classification experiment could like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="p">:</span>
+  <span class="nb">type</span><span class="p">:</span> <span class="n">CNNClassifier</span>
+  <span class="n">num_classes</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="n">pretrained</span><span class="p">:</span> <span class="n">true</span>
+  <span class="n">backbone</span><span class="p">:</span> <span class="n">resnet18</span>
+
+<span class="n">train</span><span class="p">:</span>
+  <span class="n">dataloader</span><span class="p">:</span>
+    <span class="n">batch_size</span><span class="p">:</span> <span class="mi">64</span>
+    <span class="n">shuffle</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">num_workers</span><span class="p">:</span> <span class="mi">4</span>
+
+  <span class="n">optimizer</span><span class="p">:</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="n">Adam</span>
+    <span class="n">lr</span><span class="p">:</span> <span class="mf">0.001</span>
+    <span class="n">weight_decay</span><span class="p">:</span> <span class="mf">0.0001</span>
+
+  <span class="n">scheduler</span><span class="p">:</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="n">StepLR</span>
+    <span class="n">step_size</span><span class="p">:</span> <span class="mi">7</span>
+    <span class="n">gamma</span><span class="p">:</span> <span class="mf">0.1</span>
+
+  <span class="n">epochs</span><span class="p">:</span> <span class="mi">20</span>
+
+  <span class="n">checkpoint_path</span><span class="p">:</span> <span class="n">checkpoints</span><span class="o">/</span>
+
+  <span class="n">log_interval</span><span class="p">:</span> <span class="mi">100</span>
+
+<span class="n">test</span><span class="p">:</span>
+  <span class="n">dataloader</span><span class="p">:</span>
+    <span class="n">batch_size</span><span class="p">:</span> <span class="mi">64</span>
+    <span class="n">num_workers</span><span class="p">:</span> <span class="mi">4</span>
+
+  <span class="n">checkpoint</span><span class="p">:</span> <span class="n">checkpoints</span><span class="o">/</span><span class="n">best_model</span><span class="o">.</span><span class="n">pth</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Load configuration in code:</p>
+<ul>
+<li><p>Write code to load the configuration file and parse its contents into a data structure (e.g., dictionary, object) that can be accessed programmatically.</p></li>
+<li><p>Use libraries like json, yaml, or configparser (for INI files) in Python to handle parsing and loading config files.</p></li>
+<li><p>This is an area where boiler-plate code can and should be reduced. There are many libraries that help in loading details from configuration files.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>9. Clean and anonymize data, removing any sensitive or personally identifiable information:</strong></p>
+<ul class="simple">
+<li><p>Remove API keys, passwords or other forms of information that should not be shared. Use configurable arguments that one would supply at runtime instead.</p></li>
+</ul>
+<p><strong>10. Work from branches:</strong></p>
+<ul class="simple">
+<li><p>Working from change-specific <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches">branches</a> in GitHub instead of directly in the main branch is important for several reasons:</p>
+<ul>
+<li><p>Isolation of changes: Branches allow developers to isolate their changes from the main codebase until they are ready to be merged. This prevents incomplete or experimental (“work-in-progress” or “draft”) code from affecting the stability of the main branch.</p></li>
+<li><p>Collaboration: Branches facilitate collaboration among team members by enabling them to work on different features or fixes simultaneously without interfering with each other’s work. Each developer can have their own branch to work on a specific task.</p></li>
+<li><p>Code review: By working on branches, developers can create pull requests (PRs) to propose changes to the main branch. PRs provide an opportunity for code review, where team members can provide feedback, suggestions, and identify potential issues before merging the changes into the main branch.</p></li>
+<li><p>Version control: Branches serve as a way to manage different versions or variants of the codebase. They allow developers to experiment with new features or bug fixes without affecting the main branch, and they can easily switch between branches to work on different tasks.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>12. Use version control:</strong></p>
+<ul class="simple">
+<li><p>Utilize version control systems like Git to track changes, collaborate with other developers, and manage code history.</p></li>
+<li><p>Follow branching and merging strategies (e.g., <a class="reference external" href="https://docs.aws.amazon.com/prescriptive-guidance/latest/choosing-git-branch-approach/gitflow-branching-strategy.html">GitFlow</a> to organize development workflow and facilitate collaboration.</p></li>
+<li><p>Include configuration files in version control to track changes and ensure consistency across development environments.</p></li>
+<li><p>Document the purpose and usage of each configuration parameter within the config file or accompanying documentation.</p></li>
+</ul>
+<p><strong>13. Use <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files to block certain files from being committed:</strong></p>
+<p>The <a class="reference external" href="https://git-scm.com/docs/gitignore#:~:text=A%20gitignore%20file%20specifies%20intentionally,gitignore%20file%20specifies%20a%20pattern.">.gitignore file</a> is used by Git to determine which files and directories should be ignored when tracking changes in a repository. It allows developers to specify files or patterns of files that Git should not include in version control. The primary purpose of <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> is to exclude files and directories that are not intended to be versioned or shared with others. This includes temporary files, build artifacts, system files, and sensitive data.</p>
+<p>By ignoring unnecessary files, <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> helps keep the repository clean and focused on the source code and essential project files. This makes it easier for developers to navigate the repository and reduces clutter. Without a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file, it’s easy for developers to inadvertently add unwanted files to the repository, especially when using commands like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> to stage changes. <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> helps prevent accidental inclusion of such files.</p>
+<p>When working in teams, different developers may have different development environments and tools that generate additional files. By using a shared <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file, teams can ensure consistency across environments and avoid conflicts caused by differences in ignored files. In that regard, a nice thing about <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files is their customizability to suit the specific needs of the project and development environment. Developers can specify file names, file extensions, directories, or even use wildcard patterns to match multiple files.</p>
+<p>Lastly, Git allows for both global and local <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files. Global <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files apply to all repositories on a system and are useful for excluding common files or patterns across multiple projects. Local <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files are specific to a single repository and can override or supplement global rules.</p>
+<p><strong>14. Contribute quality pull requests:</strong></p>
+<p>To consolidate the changes made in a dedicated change-specific branch to the main branch, it is best practice to submit a quality <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> (PR) such that other collaborators can vet the changes and ensure they exhibit expected behavior and don’t introduce any breaking patterns.</p>
+<ul class="simple">
+<li><p>To make a good pull request in GitHub, consider the following best practices:</p>
+<ul>
+<li><p>Create a descriptive title: The title should accurately summarize the purpose of the PR, making it easy for reviewers to understand what changes are being proposed.</p></li>
+<li><p>Provide a clear description: Write a detailed description of the changes included in the PR, explaining the problem being addressed and the solution implemented. Include any relevant context, background information, or dependencies.</p></li>
+<li><p>Include related issues or pull requests: If the PR is related to specific issues or other PRs, reference them in the description using GitHub’s linking syntax (e.g., <code class="docutils literal notranslate"><span class="pre">#issue_number</span></code> or <code class="docutils literal notranslate"><span class="pre">GH-PR-number</span></code>).</p></li>
+<li><p>Break down large changes: If the PR includes a significant number of changes or multiple unrelated changes, consider breaking it down into smaller, more manageable PRs. This makes the review process easier and allows for better focus on individual changes.</p></li>
+<li><p>Follow coding standards and conventions: Ensure that the code adheres to the project’s coding standards, style guidelines, and best practices. Consistency in formatting, naming conventions, and code organization is important for readability and maintainability.</p></li>
+<li><p>Include tests: If applicable, include tests to verify the correctness and functionality of the changes. Test coverage helps ensure that the code behaves as expected and reduces the risk of introducing regressions.</p></li>
+<li><p>Review your own changes: Before submitting the PR, review your own changes to check for errors, typos, or any unintended side effects. This helps streamline the review process and demonstrates attention to detail.</p></li>
+<li><p>Solicit feedback: If you’re unsure about any aspect of the changes, don’t hesitate to ask for feedback from colleagues or maintainers. Collaboration and communication are key to producing high-quality code.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>15. Write unit tests:</strong></p>
+<ul class="simple">
+<li><p>Implement unit tests using frameworks like <a class="reference external" href="https://docs.python.org/3/library/unittest.html">unittest</a> or <a class="reference external" href="https://docs.pytest.org/en/8.0.x/">pytest</a> to verify the correctness of individual components and prevent regressions.</p></li>
+<li><p>Aim for high test coverage to ensure comprehensive testing of code functionality.</p></li>
+</ul>
+<p><strong>16. Use virtual environments:</strong></p>
+<ul class="simple">
+<li><p>Create isolated virtual environments using tools like <a class="reference external" href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> or <a class="reference external" href="https://docs.conda.io/en/latest/">conda</a> to manage project dependencies and avoid conflicts between packages.</p></li>
+</ul>
+<p><strong>17. Document dependencies:</strong></p>
+<ul class="simple">
+<li><p>Document project dependencies explicitly by maintaining a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> or <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file to specify project or package versions.</p></li>
+<li><p>Use dependency management tools like <a class="reference external" href="https://pypi.org/project/pip/">pip</a> or <a class="reference external" href="https://docs.conda.io/en/latest/">conda</a> to install and manage dependencies consistently.</p></li>
+</ul>
+<p><strong>18. Automate testing and CI/CD:</strong></p>
+<ul class="simple">
+<li><p>Set up automated testing pipelines using continuous integration (CI) tools like <a class="reference external" href="https://docs.github.com/en/actions">GitHub Actions</a> to run tests automatically on code changes.</p></li>
+<li><p>Implement continuous delivery/deployment (CD) pipelines to automate the process of building, testing, and deploying code changes to production environments.</p></li>
+</ul>
+<p><strong>19. Code reviews and peer feedback:</strong></p>
+<ul class="simple">
+<li><p>Conduct regular PR reviews to provide feedback, identify potential issues, and ensure adherence to coding standards and best practices.</p></li>
+<li><p>Encourage collaboration and knowledge sharing among team members through constructive peer reviews.</p></li>
+</ul>
+</section>
+</section>
+<section id="using-github-for-version-control-and-collaboration">
+<h2>Using GitHub for version control and collaboration:<a class="headerlink" href="#using-github-for-version-control-and-collaboration" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>GitHub is a popular platform for version control and collaborative development.</p></li>
+<li><p>Create a GitHub repository to host your code, scripts, and related documentation.</p></li>
+<li><p>Commit your changes regularly to track the evolution of your codebase over time.</p></li>
+<li><p>(Re-emphasizing) use of branches to work on new features or experimental changes so as not to affect the main codebase.</p></li>
+<li><p>Leverage GitHub’s issue tracking and project management features to coordinate tasks and communicate with collaborators.</p></li>
+</ul>
+<p><strong>Sharing data on GitHub</strong>:</p>
+<ul class="simple">
+<li><p>Occasionally, you might want to store small-sized datasets directly within your GitHub repository (e.g. for unit tests).</p></li>
+<li><p>For larger datasets, consider providing download links to external storage platforms like <a class="reference external" href="https://aws.amazon.com/pm/serv-s3/?gclid=Cj0KCQjwzZmwBhD8ARIsAH4v1gUtsUE7VBaEAD5huvuIsFi7825Zici35fHF9N2CMlK3c1QW_X6_ttcaAoddEALw_wcB&amp;trk=fecf68c9-3874-4ae2-a7ed-72b6d19c8034&amp;sc_channel=ps&amp;ef_id=Cj0KCQjwzZmwBhD8ARIsAH4v1gUtsUE7VBaEAD5huvuIsFi7825Zici35fHF9N2CMlK3c1QW_X6_ttcaAoddEALw_wcB:G:s&amp;s_kwcid=AL!4422!3!536452728638!e!!g!!amazon%20s3!11204620052!112938567994">Amazon S3</a> or <a class="reference external" href="https://cloud.google.com/storage">Google Cloud Storage</a>.</p></li>
+<li><p>Include a <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">README</a> file in your repository that provides information about the dataset, its format, and any preprocessing steps required.</p></li>
+</ul>
+<p><strong>Using Hugging Face for model and dataset sharing</strong>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://huggingface.co/">Hugging Face</a> is a platform that specializes in hosting and sharing machine learning models and datasets.</p></li>
+<li><p>Use Hugging Face’s datasets library to upload and share your datasets with the community.</p></li>
+<li><p>Similarly, you can use the model hub to host and share your trained models, along with associated code for fine-tuning or inference.</p></li>
+</ul>
+<p><strong>Choosing Open-Access Licenses</strong>:</p>
+<ul class="simple">
+<li><p>Selecting the appropriate open-access license is essential for defining how others can use, modify, and redistribute your code and data.</p></li>
+<li><p>Common open-access licenses include <a class="reference external" href="https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide">MIT License</a>, <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License</a>, <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License (GPL)</a>, and <a class="reference external" href="https://creativecommons.org/share-your-work/cclicenses/">Creative Commons licenses</a>.</p></li>
+<li><p>Include a LICENSE file in your repository that clearly specifies the terms and conditions under which your code and data can be used.</p></li>
+</ul>
+<p><strong>Documenting Usage and Citation</strong>:</p>
+<ul class="simple">
+<li><p>Provide clear instructions on how others can use your code and data, including installation steps, dependencies, and examples.</p></li>
+<li><p>Encourage users to cite your work properly by providing citation information and <a class="reference external" href="https://www.doi.org/">DOI (Digital Object Identifier)</a> links where applicable.</p></li>
+<li><p>Include a <a class="reference external" href="https://mozillascience.github.io/working-open-workshop/contributing/#:~:text=A%20CONTRIBUTING.md%20file%2C%20in,md">CONTRIBUTING.md file</a>.) in your repository that outlines guidelines for contributing to and citing your project.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "wave"
+        },
+        kernelOptions: {
+            name: "wave",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'wave'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Scaling Science: <br> A guidebook.</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Use_of_notebooks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Use of the Jupyter ecosystem</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-data-and-code-for-sharing">Preparing Data and Code for Sharing:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#organize-your-data-and-code-in-a-clear-and-well-documented-structure">Organize your data and code in a clear and well-documented structure.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-github-for-version-control-and-collaboration">Using GitHub for version control and collaboration:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Development Seed
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
