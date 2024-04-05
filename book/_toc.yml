@@ -5,4 +5,6 @@ chapters:
   - file: docs/Open_formats_tools.ipynb
   - file: docs/Use_of_notebooks.ipynb
   - file: docs/Containerization.ipynb
+  - file: docs/Open_formats_tools.ipynb
+  - file: docs/Documentation.ipynb
   - file: docs/appendix
