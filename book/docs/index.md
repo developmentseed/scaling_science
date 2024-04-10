@@ -5,6 +5,8 @@
 
 A course on science applied in industry by [Development Seed](https://developmentseed.org/), in collaboration with the [Institute of Electrical and Electronics Engineers Geoscience and Remote Sensing Society (IEEE GRSS)](https://www.grss-ieee.org/).
 
+> To run exectuable code within the chapters indicated on the left side panel, please navigate to the upper right hand corner, select the rocket icon and select the option to launch in Binder. This rocket icon will appear on executable pages (e.g. "Open Access to Data and Code").
+
 ## Introduction
 
 This course serves as a comprehensive resource designed to empower researchers, scientists, and practitioners with the knowledge and tools needed to execute science scalably within industry settings, with a particular focus on how to embrace [open science](https://www.cos.io/open-science) practices effectively. The contents aim to address the growing demand for transparent, reproducible, and collaborative research approaches in various domains.
