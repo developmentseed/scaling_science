@@ -3,8 +3,7 @@
 <!-- #region -->
 # Scaling Science: <br> A guidebook.
 
-A course on science applied in industry, in collaboration with IEEE GRSS.
-
+A course on science applied in industry by [Development Seed](https://developmentseed.org/), in collaboration with the [Institute of Electrical and Electronics Engineers Geoscience and Remote Sensing Society (IEEE GRSS)](https://www.grss-ieee.org/).
 
 ## Introduction
 
@@ -23,6 +22,17 @@ Throughout, you will explore the ways in which industry is empowered by:
 5. **Facilitating Scalability and Sustainability:** As the title suggests, "Scaling Science" emphasizes scalability and sustainability in open science practices. The course offers strategies and best practices for scaling open science initiatives within collaborative and often interdisciplinary industry settings, ensuring long-term impact and adoption.
 
 "Scaling Science" was developed to empower researchers and practitioners with the knowledge, skills, and resources needed to embrace open science principles, foster collaboration, and drive positive change in their respective fields. By promoting openness, transparency, and community engagement, we hope this helps advance scientific research and accelerate progress towards solving many complex challenges in the geosciences.
+
+```{image} ../grss.png
+:alt: grss
+:width: 200px
+:align: left
+```
+```{image} ../ds.png
+:alt: ds
+:width: 200px
+```
+
 
 
 <!-- #endregion -->
