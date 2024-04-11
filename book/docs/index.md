@@ -32,7 +32,7 @@ Throughout, you will explore the ways in which industry is empowered by:
 ```
 ```{image} ../ds.png
 :alt: ds
-:width: 200px
+:width: 135px
 ```
 
 
