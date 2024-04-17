@@ -6,4 +6,4 @@ All materials live [here](https://developmentseed.org/scaling_science/docs/index
 <img src="book/grss.png" alt="GRSS Logo" width="200"> <img src="book/ds.png" alt="DS Logo" width="135">
 
 
-Scaling Science Guide/Cookbook © 2024 by Development Seed and IEEE Geoscience and Remote Sensing Society is licensed under Attribution 4.0 International 
+Scaling Science Guide © 2024 by Development Seed and IEEE Geoscience and Remote Sensing Society is licensed under Attribution 4.0 International 
