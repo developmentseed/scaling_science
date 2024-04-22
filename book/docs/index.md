@@ -1,7 +1,5 @@
-
-
 <!-- #region -->
-# Scaling Science: <br> A Guide.
+# Scaling Science: A Guide
 
 A guide on science applied in industry by [Development Seed](https://developmentseed.org/), in collaboration with the [Institute of Electrical and Electronics Engineers Geoscience and Remote Sensing Society (IEEE GRSS)](https://www.grss-ieee.org/).
 
@@ -30,23 +28,18 @@ Throughout, you will explore the ways in which industry is empowered by:
 :width: 200px
 :align: left
 ```
+
 ```{image} ../ds.png
 :alt: ds
 :width: 135px
 ```
-
-
 
 <!-- #endregion -->
 
 ```{admonition} $~$
 Built with [Jupyter Book
 2.0](https://beta.jupyterbook.org/intro.html) tool set, as part of the
-[ExecutableBookProject](https://ebp.jupyterbook.org/en/latest/).  
+[ExecutableBookProject](https://ebp.jupyterbook.org/en/latest/).
 ```
 
-
-
 ISBN: *(tbd)
-
-
