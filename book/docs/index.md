@@ -9,6 +9,21 @@ A guide on science applied in industry by [Development Seed](https://development
 
 This guide serves as a comprehensive resource designed to empower researchers, scientists, and practitioners with the knowledge and tools needed to execute science scalably within industry settings, with a particular focus on how to embrace [open science](https://www.cos.io/open-science) practices effectively. The contents aim to address the growing demand for transparent, reproducible, and collaborative research approaches in various domains.
 
+## Intended Audience
+
+"Scaling Science" intended for those who seek to gain a comprehensive understanding of how to effectively harness and scale geospatial data and scientific research using modern, open-source tools and methodologies. It is designed for scientists, researchers, and data practitioners who are looking to leverage cloud computing, machine learning, and big data analytics to enhance their projects. By exploring this resource, you will learn best practices for managing large datasets, automating workflows, and collaborating in a way that maximizes the impact and reach of your scientific endeavors.
+
+The guide offers practical insights and step-by-step instructions, making it an invaluable asset for anyone aiming to advance their data-driven research and achieve scalable, reproducible, and impactful results. Specifically, the "Scaling Science" guide helps bridge the gap between academia and industry by introducing academics to the tools and techniques that are widely used in the commercial sector. 
+
+## Why Is This Needed
+
+In academia, researchers often work with limited computational resources and may rely on proprietary and/or time-consuming methods for data analysis. This guide provides a pathway to adopting industry-standard practices such as using cloud platforms for large-scale data storage and processing, online repositories for publishing and collaborating on code, and implementing machine learning models for deriving insights from data. It also covers the integration of geospatial data with other types of datasets to provide richer, more comprehensive analyses. 
+
+By learning these skills, academics can transition more smoothly into industry roles where there is a high demand for expertise in data science, geospatial analysis, and scalable computing. The ability to work with big data and cloud infrastructure is highly valued in sectors such as environmental consulting, urban planning, agriculture, and disaster response. This guide emphasizes collaboration and reproducibility, which are crucial for interdisciplinary projects and for maintaining the integrity and transparency of scientific work in a commercial setting.
+
+Ultimately, the "Scaling Science" guide empowers academics to expand their skill set, enabling them to be better prepared to tackle complex, real-world problems using advanced technological solutions.
+
+## Overview of Contents
 Throughout, you will explore the ways in which industry is empowered by:
 
 1. **Promoting open science culture:** The guide seeks to emphasize a culture of openness, transparency, and collaboration within the scientific community. It provides insights into the principles and benefits of open science, encouraging participants to adopt open methodologies and share their research outputs openly.
