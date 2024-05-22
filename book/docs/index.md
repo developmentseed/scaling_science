@@ -57,4 +57,4 @@ Built with [Jupyter Book
 [ExecutableBookProject](https://ebp.jupyterbook.org/en/latest/).
 ```
 
-ISBN: *(tbd)
+[![DOI](https://zenodo.org/badge/779171607.svg)](https://zenodo.org/doi/10.5281/zenodo.11224030)

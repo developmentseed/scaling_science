@@ -8,3 +8,6 @@ All materials live in the [Scaling Science repository](https://developmentseed.o
 <a href="https://developmentseed.org/"><img src="book/ds.png" alt="DS Logo" width="135"></a>
 
 Scaling Science Guide © 2024 by Development Seed and IEEE Geoscience and Remote Sensing Society is licensed under Attribution 4.0 International
+
+[![DOI](https://zenodo.org/badge/779171607.svg)](https://zenodo.org/doi/10.5281/zenodo.11224030)
+
