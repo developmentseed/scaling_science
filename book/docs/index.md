@@ -13,7 +13,7 @@ This guide serves as a comprehensive resource designed to empower researchers, s
 
 "Scaling Science" is intended for those who seek to gain a comprehensive understanding of how to effectively harness and scale geospatial data and scientific research using modern, open-source tools and methodologies. It is designed for scientists, researchers and data practitioners who are looking to leverage cloud computing, machine learning and big data analytics to enhance their projects. By exploring this resource, you will learn best practices for managing large datasets, automating workflows and collaborating in a way that maximizes the impact and reach of your scientific endeavors.
 
-The guide offers practical insights and step-by-step instructions, making it an invaluable asset for anyone aiming to advance their data-driven research and achieve scalable, reproducible and impactful results. Specifically, the "Scaling Science" guide helps bridge the gap between academia and industry by introducing academics to the tools and techniques that are widely used in the commercial sector. 
+The guide offers practical insights and step-by-step instructions, making it a valuable asset for anyone aiming to advance their data-driven research and achieve scalable, reproducible and impactful results. Specifically, the "Scaling Science" guide helps bridge the gap between academia and industry by introducing academics to the tools and techniques that are widely used in the commercial sector. Note: this guide focuses primarily on examples using the [Python programming language](https://www.python.org/).
 
 ## Why Is This Needed
 
