@@ -7,4 +7,7 @@ chapters:
   - file: docs/Containerization.ipynb
   - file: docs/Open_formats_tools.ipynb
   - file: docs/Documentation.ipynb
-  - file: docs/appendix
+  - file: docs/appendix/index.md
+    sections:
+      - file: docs/appendix/Assessing_science_code.md
+      - file: docs/appendix/Improving_science_code.md 

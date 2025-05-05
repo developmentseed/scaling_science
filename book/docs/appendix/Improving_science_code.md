@@ -2,7 +2,7 @@
 
 "Improving code" means not only making code faster and more reliable, but also making code easier to debug, refactor, update, and understand. 
 
-If you are reading this in conjunction with [Assessing Science Code](#Assessing-Science-Code) then you can think of it as a continuous cycle. Assessing the code should give insight about how to improve it, improving the code should make it easier to assess.
+If you are reading this in conjunction with [Assessing Science Code](./Assessing_science_code.md) then you can think of it as a continuous cycle. Assessing the code should give insight about how to improve it, improving the code should make it easier to assess.
 
 Most of this involves rewriting sections of your code. It is not always the right time to do that, but when it is here are some things to keep in mind.
 
