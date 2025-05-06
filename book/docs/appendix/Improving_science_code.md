@@ -22,9 +22,7 @@ Whenever it is practical, you should consider storing the output of each pipelin
 
 ### Functions
 
-Has this happened to you? You start reading a function to try to figure out what is going on and then you realize that function relies on another fuunction which relies on another one and another one... 
-
-<!-- Potentially a drawing of turles all the way down. -->
+Has this happened to you? You start reading a function to try to figure out what is going on and then you realize that function relies on another function which relies on another one and another one... 
 
 It's not uncommon for code to be structured in that way and often it has to do with a desire for code to be extremely DRY (Do not Repeat Yourself) or to have a consistent level of abstraction at every level. Both of these concepts are good in theory, but in practice they can make code hard to debug. 
 
@@ -48,12 +46,12 @@ You can make any code more legible by using variable names that are clear and de
 
 
 ### Constants
-Move science parameters into one file and import them directly from there in the places where you need them. Constants should not be passed as paramenters to functions. Consider using a library like [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) to make it easy to override constants.
+Move science parameters into one file and import them directly from there in the places where you need them. Constants should not be passed as parameters to functions. Consider using a library like [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) to make it easy to override constants.
 
 ### Making code faster
 Writing and reading code take time just the same way that running code takes time, so if a function works and runs for 10 minutes once a year then maybe it doesn't need to be faster. Another way of putting it is: the more often a piece of code runs, the more valuable it is to make it run fast.
 
-If you have decided that it is worthwile to speed up your code the first thing to do is look for for-loops. Go to the deepest nested for-loop and see what happens in there. If it is math, see whether you can use vectors (for instance numpy arrays) rather than iterating. If there are function calls, think about what the inputs to the functions will be. Ideally you should only run a funciton if there are new inputs. That includes IO so if you are repeatedly reading the same file within a for-loop, consider moving the read up and out.
+If you have decided that it is worthwhile to speed up your code the first thing to do is look for for-loops. Go to the deepest nested for-loop and see what happens in there. If it is math, see whether you can use vectors (for instance numpy arrays) rather than iterating. If there are function calls, think about what the inputs to the functions will be. Ideally you should only run a function if there are new inputs. That includes IO so if you are repeatedly reading the same file within a for-loop, consider moving the read up and out.
 
 If you aren't sure which approach will be faster create a minimal example (or even better a test) and try it both ways and measure how long each takes.
 

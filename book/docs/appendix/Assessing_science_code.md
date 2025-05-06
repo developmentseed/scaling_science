@@ -61,8 +61,6 @@ This is especially useful for projects that are developed over time by a group o
 
 ## Understanding code
 
-<!-- TODO: do we want sections on documentation or typing? -->
-
 ### Debugging
 
 Before we get into it, just know there is nothing wrong with sticking a print statement in your code to start getting a sense of what's going on.
@@ -93,4 +91,4 @@ Focus on testing things that your function is doing not things that another libr
 
 ### Visualizing output
 
-Visualizations are not always included as part of assessing code, but they are crucial for improving intution about what's going on. The visualzations that you create while working on code can be very different than ones that you would make for a published paper. There are several libraries in the scientific python stack that try to make it is simple as possible to go from data to a visual representation. If you are already comfortable with one of those libraries you should use that. If you don't have a favorite library yet, then take a look at [hvplot](https://hvplot.holoviz.org/).
+Visualizations are not always included as part of assessing code, but they are crucial for improving intuition about what's going on. The visualizations that you create while working on code can be very different than ones that you would make for a published paper. There are several libraries in the scientific python stack that try to make it is simple as possible to go from data to a visual representation. If you are already comfortable with one of those libraries you should use that. If you don't have a favorite library yet, then take a look at [hvplot](https://hvplot.holoviz.org/).
