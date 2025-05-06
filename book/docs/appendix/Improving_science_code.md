@@ -68,8 +68,8 @@ When writing output make sure to use stable and popular file formats. Here are s
 
 When writing output you often have control over how the data gets compressed and how each datatype is represented (think 8 bit vs 64 bit). You probably don't need to think about that when you first write a file, but if you are trying to make reads and writes more performant, that is something to consider. 
 
-### The case against Pickles
-Any reputable file format has a detailed specification and makes strong promises about backwards compatibility. This means that you will always be able to read your data. An example of a file format that doesn't make such strong guarantees is a Python pickle. Pickles can be read back in _as long as the environment has not changed_. In addition to potentially trapping you with old versions of software, pickles are also terrible for reproducibility because it can be very hard to recreate exactly the same environment on a different machine.
+### The case against Python Pickles
+Any reputable file format has a detailed specification and makes strong promises about backwards compatibility. This means that you will always be able to read your data. An example of a storage option that doesn't make such strong guarantees is a Python pickle. Pickles can be read back in _as long as the environment has not changed_. In addition to potentially trapping you with old versions of software, pickles are also terrible for reproducibility because it can be very hard to recreate exactly the same environment on a different machine.
 
-### Write to local - copy to s3
+### Write to local - copy to cloud object storage (e.g. s3)
 Reading straight from s3 is great! It is a core to cloud-native IO concepts. But when writing, we recommend that you write things locally first and then copy them to s3 - or to any cloud object storage.
