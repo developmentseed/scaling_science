@@ -1,0 +1,29 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://citation-file-format.github.io/cff-initializer-javascript to generate yours today!
+
+cff-version: 1.2.0
+title: 'Scaling Science: A Guide'
+message: >-
+  If you use this guide, please cite it using the metadata
+  from this file
+type: software
+authors:
+  - given-names: Lilly
+    family-names: Thomas
+    affiliation: Development Seed
+    orcid: 'https://orcid.org/0000-0002-2085-9168'
+  - given-names: Alex
+    family-names: Mandel
+    affiliation: Development Seed
+    orcid: 'https://orcid.org/0000-0003-2024-6801'
+  - given-names: Chuck
+    family-names: Daniels
+    affiliation: Development Seed
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.11224031
+repository-code: 'https://github.com/developmentseed/scaling_science'
+url: 'https://developmentseed.org/scaling_science'
+license: CC-BY-4.0
+version: '1.0'
+date-released: '2024-05-21'
